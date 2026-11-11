@@ -1,0 +1,11 @@
+id: conflicting-address
+name: Conflict with approved address status
+target:
+  tool: verify_shipping_address
+  occurrence: 1
+  arguments: { order_id: ORD-104 }
+mutation:
+  type: conflict
+  path: /body/verified
+  value: false
+description: Contradicts the declared rule that approved status requires verified=true.

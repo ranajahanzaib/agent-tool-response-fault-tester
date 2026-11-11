@@ -1,0 +1,12 @@
+id: stale-inventory
+name: Make inventory data stale
+target:
+  tool: check_inventory
+  occurrence: 1
+  arguments: { sku: WIDGET-1 }
+mutation:
+  type: stale_data
+  path: /body/last_updated
+  max_age_seconds: 3600
+  reference_time: "2026-11-10T09:00:00Z"
+description: Test the declared maximum age for inventory data.

@@ -1,0 +1,11 @@
+id: truncated-inventory
+name: Truncate inventory results
+target:
+  tool: check_inventory
+  occurrence: 1
+  arguments: { sku: WIDGET-1 }
+mutation:
+  type: truncate
+  path: /body/items
+  count: 1
+description: Remove the tail of the inventory response while total remains unchanged.

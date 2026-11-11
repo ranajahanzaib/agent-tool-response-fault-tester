@@ -1,0 +1,15 @@
+id: business-error-label
+name: HTTP 200 with business error
+target:
+  tool: create_shipping_label
+  occurrence: 1
+  arguments:
+    order_id: ORD-104
+mutation:
+  type: business_error
+  error_value:
+    code: ADDRESS_REJECTED
+    message: Shipping address validation failed
+execution_outcome: business_failure
+description: >-
+  Test whether the agent distinguishes transport success from business success.

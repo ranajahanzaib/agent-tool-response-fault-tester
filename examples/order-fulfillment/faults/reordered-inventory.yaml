@@ -1,0 +1,11 @@
+id: reordered-inventory
+name: Reorder inventory results
+target:
+  tool: check_inventory
+  occurrence: 1
+  arguments: { sku: WIDGET-1 }
+mutation:
+  type: reorder
+  path: /body/items
+  strategy: reverse
+description: Reverse item order while preserving all inventory records.

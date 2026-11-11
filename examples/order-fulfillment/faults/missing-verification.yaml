@@ -1,0 +1,10 @@
+id: missing-address-verification
+name: Remove address verification
+target:
+  tool: verify_shipping_address
+  occurrence: 1
+  arguments: { order_id: ORD-104 }
+mutation:
+  type: remove_field
+  path: /body/verified
+description: Test whether an omitted verification result is treated as approval.
