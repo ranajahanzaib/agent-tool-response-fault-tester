@@ -1,7 +1,11 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+Notable changes are grouped by release.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## Unreleased
 
-## [Unreleased]
+### Added
+
+- Local scripted and Ollama workflows with JSON trace recording and counterfactual replay.
+- Six structured response mutations and an isolated order-fulfillment simulator.
+- CLI, local dashboard API, React dashboard, JSON/HTML reports, and contributor guidance.
