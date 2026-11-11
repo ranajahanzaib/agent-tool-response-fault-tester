@@ -1,46 +1,41 @@
-## Contributing
+# Contributing
 
-We welcome contributions of all kinds to improve this project! Here's how you can get involved:
+Bug reports, documentation improvements, and focused code changes are welcome.
+For behavior changes, include a test that captures the expected result. Keep
+simulator evidence distinct from results produced by a local model.
 
-1. **Fork the Repository**: Start by forking the repository to your GitHub account.
+## Development setup
 
-2. **Clone Your Fork**: Clone the forked repository to your local machine:
+Install [uv](https://docs.astral.sh/uv/), Node.js 22 or newer, and pnpm 12,
+then clone the repository and install its dependencies:
 
-   ```bash
-   git clone <repo_url>
-   cd repo_dir
-   ```
+```bash
+git clone https://github.com/ranajahanzaib/agent-tool-response-fault-tester.git
+cd agent-tool-response-fault-tester
+uv sync --locked --extra dev
+(cd web && pnpm install --frozen-lockfile)
+```
 
-3. **Create a Branch**: Create a new branch for your feature or bug fix:
+Run the checks before opening a pull request:
 
-   ```bash
-   git checkout -b feature-name
-   ```
+```bash
+cd ..
+uv run ruff check .
+uv run ruff format --check .
+uv run pytest
+(cd web && pnpm typecheck && pnpm test && pnpm build)
+```
 
-4. **Make Changes**: Make your changes to the codebase. Be sure to follow existing code style and conventions.
+Ollama tests are opt-in and require a local Ollama server and model. See the
+README for the `TOOLFAULT_TEST_OLLAMA=1` command.
 
-5. **Commit Changes**: Commit your changes with a clear and descriptive message:
+## Pull requests
 
-   ```bash
-   git commit -m "Add detailed description of the changes"
-   ```
+Use a short branch name that describes the change. In the pull request, explain
+the user-visible behavior, note any compatibility or security impact, and list
+the checks you ran. Update relevant documentation when commands, trace formats,
+scenario fields, or replay behavior change. Avoid including real credentials or
+private trace payloads in commits, tests, screenshots, or issue reports.
 
-6. **Push Changes**: Push your changes to your fork:
-
-   ```bash
-   git push origin feature-name
-   ```
-
-7. **Submit a Pull Request**: Open a pull request from your branch to the main repository's branch. Include a detailed description of your changes and the problem they solve.
-
-8. **Review and Feedback**: Participate in the review process. Make any requested changes, and your contribution will be merged!
-
-### Guidelines
-
-- Ensure your code follows the existing style and conventions.
-- Include tests for any new functionality or bug fixes.
-- Write clear, concise commit messages and pull request descriptions.
-
-### Issues
-
-Feel free to report bugs or suggest enhancements by creating an issue. Be sure to include detailed information about the problem and, if possible, steps to reproduce it.
+For larger changes, open an issue first to discuss the scope. A review does not
+guarantee acceptance or a particular merge timeline.

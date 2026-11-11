@@ -1,26 +1,30 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: ""
 labels: bug
-assignees: ''
+assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## What happened?
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. See error
+Describe the behavior and include the command or workflow involved.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## How can it be reproduced?
 
-**Environment**
-- OS: [e.g. macOS 26.4.1, Windows 11, Ubuntu 24.04.4]
-- Version: [e.g. 1.0.0]
+List the steps, scenario, and fault needed to reproduce the issue. Remove or redact private trace data.
 
-**Additional context**
-Add any other context or screenshots here.
+## Expected behavior
+
+Describe what you expected to happen.
+
+## Environment
+
+- Operating system:
+- Agent Tool Response Fault Tester version or commit:
+- Python version:
+- Node.js version (if relevant):
+
+## Additional context
+
+Include relevant logs or screenshots after removing secrets and personal data.
