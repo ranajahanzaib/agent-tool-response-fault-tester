@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Tool Response Fault Tester scripted demo</title>
+  <desc id="desc">Actual CLI demo output showing a passing order fulfillment baseline and a failing replay with an HTTP 200 business error.</desc>
+  <rect width="1200" height="470" rx="18" fill="#101715"/>
+  <path d="M18 0h1164a18 18 0 0 1 18 18v48H0V18A18 18 0 0 1 18 0Z" fill="#1b2521"/>
+  <circle cx="30" cy="33" r="7" fill="#ff6b62"/><circle cx="54" cy="33" r="7" fill="#edc25f"/><circle cx="78" cy="33" r="7" fill="#a8df73"/>
+  <text x="105" y="38" fill="#a8b7ac" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">actual local CLI run · scripted fixture</text>
+  <text x="48" y="119" fill="#a8df73" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">$ uv run agent-tool-response-fault-tester demo --agent scripted</text>
+  <text x="48" y="176" fill="#d8e3da" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">Scenario: Order Fulfillment</text>
+  <text x="48" y="220" fill="#d8e3da" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">Baseline: <tspan fill="#a8df73" font-weight="700">pass</tspan></text>
+  <text x="48" y="264" fill="#d8e3da" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">Replay:   <tspan fill="#ff8d83" font-weight="700">fail</tspan></text>
+  <text x="48" y="308" fill="#d8e3da" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">Report:</text>
+  <text x="48" y="338" fill="#8ea196" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">.agent-tool-response-fault-tester/reports/ce336784-cde1-4cc0-88f5-67dcf0a75471.j</text>
+  <text x="48" y="362" fill="#8ea196" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">son</text>
+  <line x1="48" y1="399" x2="1152" y2="399" stroke="#34433b"/>
+  <text x="48" y="435" fill="#92a197" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">Deterministic simulator evidence · no LLM inference in this run</text>
+</svg>

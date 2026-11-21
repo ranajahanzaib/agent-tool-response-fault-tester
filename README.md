@@ -11,6 +11,24 @@ incomplete or contradictory.
 > Scripted results are deterministic fixture evidence, not measured model behavior.
 > Ollama runs use genuine local inference and are labeled separately in traces.
 
+![Agent Tool Response Fault Tester dashboard showing a passing baseline beside a failing business-error replay](docs/screenshots/dashboard-overview.png)
+
+The bundled order-fulfillment workflow compares an isolated baseline with a replay
+that returns an HTTP 200 response containing a business error. Its deterministic
+scripted strategy reports a false success, and the evaluator catches the missing
+shipping-label effect. This is fixture evidence; it is not a model benchmark.
+
+The dashboard presents the same comparison as an interactive event timeline, with
+fault injection, outcome checks, and the original and mutated tool payloads. Start
+the local API and frontend as described in [Dashboard](#dashboard) to explore it.
+
+The evidence view shows the injected response and the evaluator's false-success
+finding. The CLI produces the same deterministic result without starting a model:
+
+![Dashboard evidence showing the false-success finding and original versus injected payload](docs/screenshots/dashboard-failure-evidence.png)
+
+![CLI demo: the baseline passes and the business-error replay fails](docs/screenshots/cli-demo.svg)
+
 ## Quick start
 
 Requirements: Python 3.11+, `uv`, Node.js 22+, and pnpm 12. The scripted
