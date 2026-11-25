@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Agent Tool Response Fault Tester in research or teaching, please cite this software."
+title: "Agent Tool Response Fault Tester"
+version: 0.1.0
+authors:
+  - family-names: Rana
+    given-names: Jahanzaib
+    orcid: "https://orcid.org/0009-0006-7085-0440"
+repository-code: "https://github.com/ranajahanzaib/agent-tool-response-fault-tester"
+license: MIT
+abstract: "Agent Tool Response Fault Tester is a local-first developer tool for recording tool-using workflows, injecting a controlled response fault, and inspecting the evidence around an agent's behavior."
+keywords:
+  - ai-agents
+  - fault-injection
+  - tool-use
+  - reliability
+  - testing
